@@ -1,6 +1,6 @@
 # About
 
-This is the [Go](https://golang.org/) implementation.
+This is the [Go](https://golang.org/) implementation of [simple-graph](https://github.com/dpapathanasiou/simple-graph).
 
 # Usage
 
@@ -16,7 +16,7 @@ This is the [Go](https://golang.org/) implementation.
   ```sh
   go get github.com/goccy/go-graphviz
   ```
-* Optionally, or if the statements in the [sql](../sql) folder change during development, run the [constants generation script](generate-constants.sh) to rebuild the `constants.go` file
+* Optionally, or if the statements in the [originating sql folder (https://github.com/dpapathanasiou/simple-graph/tree/main/sql) change, run the [constants generation script](generate-constants.sh) to rebuild the `constants.go` file
   ```sh
   ./generate-constants.sh
   ```
@@ -24,6 +24,8 @@ This is the [Go](https://golang.org/) implementation.
 ## Basic Functions
 
 The [database package](simplegraph/database.go) provides convenience functions for [atomic transactions](https://en.wikipedia.org/wiki/Atomicity_(database_systems)) to add, delete, connect, and search for nodes.
+
+There are also [visualization functions](simplegraph/visualizer.go) to convert search and traversal outputs into [dot format](https://graphviz.org/pdf/dotguide.pdf) for conversion images.
 
 ## Testing
 
